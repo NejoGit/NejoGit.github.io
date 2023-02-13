@@ -312,7 +312,7 @@ button {
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
 .head_top {
-     background: url(../images/banner3.png);r
+     background-color: white;
      background-size: 100% 100%;
      background-repeat: no-repeat;
      background-position: center;
@@ -774,11 +774,11 @@ ul.social_icon li a {
      width: 50px;
      height: 50px;
      display: inline-block;
-     color: #008df3;
+     color: #F18A16;
 }
 
 ul.social_icon li a:hover {
-     background: #23262d;
+     background: #000000;
 }
 
 .copyright {
