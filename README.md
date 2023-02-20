@@ -1,16 +1,13 @@
-### Hi there 👋
+# Responsive Website Delivery 🚚
+## [Watch it on youtube](https://youtu.be/xOQU3YNHxJc)
+### Responsive Website Delivery
 
-<!--
-**NejoGit/NejoGit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- Website Delivery, using HTML, Sass and JavaScript.
+- Includes a dark and light mode.
+- Color customization.
+- Developed first with the Mobile First methodology, then for desktop.
+- Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-Here are some ideas to get you started:
+Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Delivery website](/preview.png)
