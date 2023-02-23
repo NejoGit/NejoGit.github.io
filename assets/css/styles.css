@@ -112,7 +112,7 @@ body.dark-theme {
 }
 
 .dark-theme .footer {
-  background-color: var(--container-color);
+  background-color: #FF8B00;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -249,7 +249,7 @@ body.dark-theme {
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: #FF8B00;
   color: #1A1A1A;
   padding: .75rem 1.5rem;
   border-radius: 3rem;
@@ -371,7 +371,7 @@ body.dark-theme {
 
 /*=============== FOOTER ===============*/
 .footer {
-  background-color: var(--first-color-lighten);
+  background-color: white;
   padding-bottom: 2rem;
 }
 
@@ -423,7 +423,7 @@ body.dark-theme {
 /*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
-  background: var(--first-color);
+  background:#FF8B00;
   right: 1rem;
   bottom: -20%;
   display: inline-flex;

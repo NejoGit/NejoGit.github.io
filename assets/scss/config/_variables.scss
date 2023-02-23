@@ -6,9 +6,9 @@
     --header-height: 3rem;
 
     /*========== Colors ==========*/
-    --hue: 45; //  Yellow: 30   | Red: 4 | Orange: 50  | Green: 90
-    --sat: 98%; // Yellow: 40% | Red: 50% | Orange: 90% | Green: 50%
-    --first-color: hsl(var(--hue), var(--sat), 60%);
+    --hue: 45; //  Yellow: 5   | Red: 5 | Orange: 85  | Green: 5
+    --sat: 98%; // Yellow: 1% | Red: 1% | Orange: 97% | Green: 1%
+    --first-color: #FF8B00;
     --first-color-light: hsl(var(--hue), var(--sat), 85%);
     --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
     --first-color-alt: hsl(var(--hue), var(--sat), 53%);
