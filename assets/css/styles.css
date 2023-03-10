@@ -81,6 +81,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: .5s;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1038,6 +1039,7 @@ body.dark-theme {
 
 @media screen and (min-width: 767px) {
   body {
+ 
     margin: 0;
   }
 
