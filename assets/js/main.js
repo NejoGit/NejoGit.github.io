@@ -110,3 +110,31 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme());
     localStorage.setItem('selected-icon', getCurrentIcon());
 })
+
+// $(document).ready(function () {
+//     $('.services__container').slick({
+//         slidesToShow: 3,
+//         slidesToScroll: 3,
+//         dots: true,
+//         arrows: false,
+//         responsive: [
+//             {
+//                 breakpoint: 1024,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     slidesToScroll: 2,
+//                     infinite: true,
+//                     dots: true
+//                 }
+//             },
+//             {
+//                 breakpoint: 600,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     slidesToScroll: 1
+//                 }
+//             }
+//         ]
+//     });
+// });
+
