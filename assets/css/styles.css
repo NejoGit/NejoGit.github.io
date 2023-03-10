@@ -747,14 +747,21 @@ body.dark-theme {
   box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
   padding: 2rem 1.5rem;
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
-.services__img {
-  width: 135px;
+.iconos {
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
+  height: auto;
   justify-self: center;
   margin-bottom: var(--mb-0-5);
 }
+.service_container {
+  max-width: 1140px;
+}
+
 
 /*=============== APP ===============*/
 .app__container {
