@@ -8,10 +8,11 @@
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="assets/img/iconNejo.png">
 
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Nejo | Nuevas formas de trabajar</title>
 </head>
@@ -20,7 +21,8 @@
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Nejo</a>
+            <img href="#" id="logoNav" class="nav__logo__img" src="assets/img/NejoWithBackground.png" alt="">
+            <!-- <a  href="#" class="nav__logo">Nejo</a> -->
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -44,7 +46,7 @@
                 <i class='bx bx-grid-alt'></i>
             </div>
 
-            <a href="#" class="button button__header">Descargar</a>
+            <a href="#" class="button button__header open-modal">Descargar</a>
         </nav>
     </header>
 
@@ -69,23 +71,42 @@
                 </g>
             </svg>
         </div>
+
+        <div id="modal" class="modal">
+
+            <div class="modal-content">
+                <a href="#" id="close-modal" class="close-icon"><i class="material-icons">close</i></a>
+                <img href="#" src="assets/img/NejoWithBackground.png" alt="" width="150px">
+                <h2>Cuenta regresiva:</h2>
+                <p id="countdown"></p>
+                <p class="message-modal">No te pierdas el lanzamiento de nuestra nueva aplicación. <br>Únete a nuestra
+                    comunidad y recibe
+                    notificaciones sobre su disponibilidad en las tiendas de aplicaciones.</p>
+                <a href="#contact" id="button-modal" class="button button-flex">
+                    ¡Suscribirme ahora!
+                </a>
+            
+            </div>
+        </div>
         <!--=============== HOME ===============-->
         <section class="home section" id="home">
             <div class="home__container container grid">
 
 
                 <div class="home__data">
-                    <h1 class="home__title">Comienza hoy mismo a explorar nuevas formas de vida en el extranjero</h1>
+                    <div id="div-titulo">
+                        <h1 class="home__title move-from-left" id="titulo-animado">Comienza hoy mismo a explorar nuevas formas de vida en el extranjero</h1>
+                    </div>
                     <!-- <h1 class="home__title">Seguridad</h1> -->
                     <div class="home__space"></div>
                     <p class="home__description">Nejo es una app que transformó la búsqueda de empleo en el extranjero
                         en un proceso fácil y seguro para los trabajadores latinoamericanos.
                     </p>
                     <div class="app__buttons">
-                        <a href="#" class="button button-flex">
+                        <a href="#" class="button button-flex open-modal">
                             <i class='bx bxl-apple button__icon'></i> App Store
                         </a>
-                        <a href="#" class="button button-flex">
+                        <a href="#" class="open-modal button button-flex">
                             <i class='bx bxl-play-store button__icon'></i> Google Play
                         </a>
                     </div>
@@ -94,7 +115,7 @@
                 </div>
                 <div class="home__container_image">
                     <!-- <img class="home__img" src="assets/img/BaseIphoneHome.png" alt="logo"> -->
-                    <div class="card card1">
+                    <div class="card card1 move-from-right">
                         <div class="container-company">
                             <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png"
                                 alt="Logo de Google">
@@ -124,7 +145,7 @@
                         </div>
 
                     </div>
-                    <div class="card card2">
+                    <div class="card card2 move-from-right">
                         <div class="container-company">
                             <img src="assets/img/iconNejo.png" alt="Logo de Google">
                             <div class="details-company-container">
@@ -163,20 +184,21 @@
         <section class="about section container" id="about">
             <div class="about__container grid">
                 <div class="about__data">
-                    <h2 class="section__title-center">La startup latina que simplifica el proceso migratorio
+                    <h2 class="section__title-center move-from-right">La startup latina que simplifica el proceso
+                        migratorio
                         laboral<br></h2>
                     <!-- <p class="about__description">Somos una startup creada por estudiantes colombianos y apoyada por el
                         Tec de Monterrey.
                     </p> -->
-                    <p class="about__description">
+                    <p class="about__description move-from-right">
                         Conectamos con oportunidades laborales a los trabajadores latinos y ayudamos a
                         empresas extranjeras a encontrar talentos calificados.
                     </p>
-                    <p class="about__description">
+                    <p class="about__description move-from-right">
                         Únete a nuestra comunidad para hacer realidad tus sueños laborales en el extranjero.
                     </p>
-                    <div class="about__contact">
-                        <a href="#">Únete a nuestra comunidad</a>
+                    <div class="about__contact move-from-right">
+                        <a href="#contact ">Únete a nuestra comunidad</a>
                         <i class="material-icons arrow-icon">arrow_forward_ios</i>
                     </div>
 
@@ -184,7 +206,8 @@
                     <!-- <p>¡En Nejo, creemos en un futuro más sostenible y queremos que tú seas parte de él!</p> -->
                 </div>
 
-                <img class="svg__img svg__color about__img" viewBox="0 0 312 236" src="assets/img/AboutUs_Landing.png">
+                <img class="svg__img svg__color about__img move-from-left" viewBox="0 0 312 236"
+                    src="assets/img/AboutUs_Landing.png">
 
             </div>
         </section>
@@ -194,12 +217,11 @@
             <div class="security__container grid">
                 <div class="security__data">
                     <h2 class="section__title-center">Características de Nejo</h2>
-                    <p class="section__description-center">Describamos un poco cuales son nuestros principales
-                        estándares y objetivos a brindar</p>
+                    <p class="section__description-center">Nuestros principales estándares y objetivos para ofrecerte la mejor experiencia posible</p>
                     <!-- <p class="security__description">When your order reaches you, we have the health safety protocols,
                         so that you are protected from any disease. Watch the video of how the delivery is made.
                     </p> -->
-                    <div class="container__quality">
+                    <div class="container__quality move-from-left">
                         <div class="blob1"></div>
                         <img class="img_feature img__security" src="assets/img/SeguridadNejo.png" alt="">
                         <div class="qualities qualities__1">
@@ -209,7 +231,7 @@
                             <!-- y siempre mostramos la información a terceros con su consentimiento -->
                         </div>
                     </div>
-                    <div class="container__quality">
+                    <div class="container__quality move-from-left">
                         <div class="blob2"></div>
                         <img class="img_feature img__verify" src="assets/img/VerificarNejo.png" alt="">
                         <div class="qualities qualities__2">
@@ -218,7 +240,7 @@
                                 gantizar su valor</p>
                         </div>
                     </div>
-                    <div class="container__quality">
+                    <div class="container__quality move-from-left">
                         <div class="blob3"></div>
                         <img class="img_feature img__usability" src="assets/img/UsabilidadNejo.png" alt="">
                         <div class="qualities qualities__1">
@@ -229,12 +251,13 @@
                     </div>
 
                 </div>
-                <div class="app__views">
+                <div class="app__views  ">
 
-                    <img class="img_app 1" src="assets/img/AppProfileNejo.png">
-                    <img class="img_app 2" src="assets/img/AppJobsNejo.png">
-                    <img class="img_app 3" src="assets/img/AppHomeNejo.png">
+                    <img class="img_app 1 move-from-right" src="assets/img/AppProfileNejo.png">
+                    <img class="img_app 2 move-from-right" src="assets/img/AppJobsNejo.png">
+                    <img class="img_app 3 move-from-right" src="assets/img/AppHomeNejo.png">
                 </div>
+
 
 
             </div>
@@ -256,7 +279,7 @@
                 <div class="services__data">
                     <h3 class="services__subtitle">Control de Ofertas</h3>
                     <img class="iconos" src="assets/Iconos/Control_ofertas.png" alt="">
-                    <p class="services__description">Ten un visión en nuestro sistema de Control de Ofertas. Conoce el
+                    <p class="services__description">Accede a un seguimiento en nuestro sistema de Control de Ofertas. Conoce el
                         estado de tus aplicaciones en tiempo real y proyecta tu futuro laboral con confianza.</p>
                     <div>
                         <a href="#" class="button button-link">Leer más</a>
@@ -265,7 +288,8 @@
                 <div class="services__data">
                     <h3 class="services__subtitle">Portal de Empleos</h3>
                     <img class="iconos" src="assets/Iconos/Portal_empleo.png" alt="">
-                    <p class="services__description">Accede a oportunidades laborales en cualquier país del mundo y cumple tu sueño de vivir y trabajar en el exterior en la modalidad que prefieras.</p>
+                    <p class="services__description">Accede a oportunidades laborales en cualquier país del mundo y
+                        cumple tu sueño de vivir y trabajar en el exterior en la modalidad que prefieras.</p>
                     <div>
                         <a href="#" class="button button-link">Leer más</a>
                     </div>
@@ -274,7 +298,9 @@
                 <div class="services__data">
                     <h3 class="services__subtitle">Ayuda Migratoria</h3>
                     <img class="iconos" src="assets/Iconos/Ayuda_migratoria.png" alt="">
-                    <p class="services__description">Agenda una cita con un experto en migración para que te brinde asesoramiento personalizado y te guíe en cada paso de tu proceso. Obtén información sobre visados, permisos, leyes y cómo adaptarte a tu nuevo país.</p>
+                    <p class="services__description">Agenda una cita con un experto en migración para que te brinde
+                        asesoramiento personalizado y te guíe en cada paso de tu proceso. Obtén información sobre
+                        visados, permisos, leyes y cómo adaptarte a tu nuevo país.</p>
                     <div>
                         <a href="#" class="button button-link">Leer más</a>
                     </div>
@@ -283,7 +309,9 @@
                 <div class="services__data">
                     <h3 class="services__subtitle">Plan Migratorio</h3>
                     <img class="iconos" src="assets/Iconos/Plan_migratorio.png" alt="">
-                    <p class="services__description">Crea tu plan migratorio personalizado en minutos. Nuestro avanzado software analiza tu perfil y cargo para identificar los países y las visas más adecuadas para ti.</p>
+                    <p class="services__description">Crea tu plan migratorio personalizado en minutos. Nuestro avanzado
+                        software analiza tu perfil y profesión para identificar los países y visas más adecuadas para
+                        ti.</p>
                     <div>
                         <a href="#" class="button button-link">Leer más</a>
                     </div>
@@ -293,7 +321,9 @@
                 <div class="services__data">
                     <h3 class="services__subtitle">Ayuda Laboral</h3>
                     <img class="iconos" src="assets/Iconos/Ayuda_laboral.png" alt="">
-                    <p class="services__description">Con servicios regulados por expertos, podrás elaborar un CV y carta de presentación que destaque en el extranjero, entrenarte para sobresalir en las entrevistas internacionales, y tener acceso a traducción oficial confiable de tus documentos.</p>
+                    <p class="services__description">Con servicios regulados por expertos, podrás elaborar un CV y carta
+                        de presentación que destaque en el extranjero, entrenarte para sobresalir en las entrevistas
+                        internacionales, y tener acceso a traducción oficial confiable de tus documentos.</p>
                     <div>
                         <a href="#" class="button button-link">Leer más</a>
                     </div>
@@ -305,47 +335,72 @@
         <section class="app section container">
             <div class="app__container grid">
                 <div class="app__data">
-                    <h2 class="section__title-center">Miles de empleadores extranjeros te están buscando <br> Solo falta
+                    <h2 class="section__title-center move-from-right">Miles de empleadores extranjeros te están buscando <br> Solo falta
                         que descargues la app</h2>
-                    <p class="app__description">Únete a Nejo y sé parte de nuestro movimiento hacia un futuro de oportunidades. ¡Juntos, podemos hacer que la búsqueda de empleo en el extranjero sea fácil y segura para todos los trabajadores latinoamericanos!</p>
+                    <p class="app__description move-from-right">Únete a Nejo y sé parte de nuestro movimiento hacia un futuro de
+                        oportunidades. ¡Juntos, podemos hacer que la búsqueda de empleo en el extranjero sea fácil y
+                        segura para todos los trabajadores latinoamericanos!</p>
                     <div class="app__buttons">
-                        <a href="#" class="button button-flex">
+                        <a href="#" class="button button-flex open-modal">
                             <i class='bx bxl-apple button__icon'></i> App Store
                         </a>
-                        <a href="#" class="button button-flex">
+                        <a href="#" class="button button-flex open-modal">
                             <i class='bx bxl-play-store button__icon'></i> Google Play
                         </a>
                     </div>
                 </div>
 
 
-                <img class="svg__img svg__color app__img" viewBox="0 0 312 256" src="assets/img/AppSearchImg.png">
+                <img class="svg__img svg__color app__img move-from-left" viewBox="0 0 312 256" src="assets/img/AppSearchImg.png">
 
             </div>
         </section>
 
         <!--=============== CONTACT US ===============-->
         <section class="contact section container" id="contact">
-            <div class="contact__container grid">
-                <div class="contact__content">
-                    <h2 class="section__title-center">Contactanos <br> Aquí</h2>
-                    <p class="contact__description">Suscribete a la comunidad de Nejo ☺.</p>
-                    <input type="email" name="email" placeholder="Ingresa tu correo electrónico" class="email-input">
-                    
-                </div>
+            <form id="my-form" method="post">
+                <div class="contact__container grid">
+                    <div class="contact__content">
+                        <h2 class="section__title-center">
+                            <%= title %>
+                        </h2>
+                        <p class="contact__description">Suscribete a la comunidad Nejo LATAM.</p>
+                        <div class="container__input">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombres" class="name input">
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos"
+                                class="lastname input">
+                        </div>
+                        <input type="email" name="email" placeholder="Ingresa tu correo" class="email input" id="email">
 
-                <ul class="contact__content grid">
-                    <li class="contact__address">Teléfono: <span class="contact__information">8131128625</span>
-                    </li>
-                    <li class="contact__address">Email: <span class="contact__information">nejouser@gmail.com</span>
-                    </li>
-                    <li class="contact__address">Ubicación: <span class="contact__information">Monterrey - México</span></li>
-                </ul>
+                        <select id="pais" name="pais">
+                            <option value="">Destino deseado</option>
+                            <option value="Canada">Canadá</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Italy">Italia</option>
+                            <option value="New Zealand">Nueva Zelanda</option>
+                            <option value="Germany">Alemania</option>
+                        </select>
+                    </div>
 
-                <div class="contact__content">
-                    <a href="#" class="button">Suscribirse</a>
+                    <ul class="contact__content grid">
+                        <li class="contact__address">Teléfono: <span class="contact__information">8131128625</span>
+                        </li>
+                        <li class="contact__address">Email: <span class="contact__information">nejouser@gmail.com</span>
+                        </li>
+                        <li class="contact__address">1° Ubicación: <span class="contact__information">Monterrey -
+                                México</span>
+                        </li>
+                        <li class="contact__address">2° Ubicación: <span class="contact__information">Colombia</span>
+                        </li>
+
+                    </ul>
+
+                    <div class="contact__content">
+                        <button type="submit" class="button">Suscribirme</button>
+
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
 
@@ -358,30 +413,31 @@
             </div>
 
             <div class="footer__content">
-                <h3 class="footer__title">Our Services</h3>
+                <h3 class="footer__title">Servicos</h3>
                 <ul class="footer__links">
                     <!-- <li><a href="#" class="footer__link">Pricing </a></li>
                     <li><a href="#" class="footer__link">Discounts</a></li> -->
-                    <li><a href="#" class="footer__link">Report a bug</a></li>
-                    <li><a href="#" class="footer__link">Terms of Service</a></li>
+                    <li><a href="#" class="footer__link">Política de privacidad</a></li>
+                    <li><a href="#" class="footer__link">Términos de servicio</a></li>
                 </ul>
             </div>
 
             <div class="footer__content">
-                <h3 class="footer__title">Our Company</h3>
+                <h3 class="footer__title">Nosotros</h3>
                 <ul class="footer__links">
                     <li><a href="#" class="footer__link">Blog</a></li>
-                    <li><a href="#" class="footer__link">Our mision</a></li>
-                    <li><a href="#" class="footer__link">Get in touch</a></li>
+                    <li><a href="#" class="footer__link">Nuestra misión</a></li>
+
                 </ul>
             </div>
 
             <div class="footer__content">
-                <h3 class="footer__title">Community</h3>
+                <h3 class="footer__title">Comunidad</h3>
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Support</a></li>
-                    <li><a href="#" class="footer__link">Questions</a></li>
-                    <li><a href="#" class="footer__link">Customer help</a></li>
+                    <li><a href="https://chat.whatsapp.com/I5K805KP8HEK2SojpD9E4u" class="footer__link">Grupo Whatsapp</a></li>
+                    <li><a href="#" class="footer__link">Soporte</a></li>
+                    <li><a href="#" class="footer__link">Preguntas</a></li>
+                    <!-- <li><a href="#" class="footer__link">Customer help</a></li> -->
                 </ul>
             </div>
 
@@ -402,8 +458,41 @@
     </a>
 
     <!--=============== MAIN JS ===============-->
-     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script src="main.js">
+    </script>
+    <script>
+
+
+        window.addEventListener("load", function () {
+            const form = document.getElementById('my-form');
+            form.action = "<%= varenv %>";
+
+            form.addEventListener("submit", function (evento) {
+                evento.preventDefault(); // Evita que se envíe el formulario
+
+                const nombre = document.getElementById('nombre').value;
+                const apellido = document.getElementById('apellido').value;
+                const email = document.getElementById('email').value;
+
+                if (nombre === '' || email === ''|| apellido === '') {
+                    alert('Por favor, completa todos los campos'); // Muestra un mensaje de error
+                    return;
+                }
+                const data = new FormData(form);
+                const action = evento.target.action;
+
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        alert("Success!");
+                    });
+            });
+        });
+
+    </script>
+
 </body>
 
-</html> 
+</html>

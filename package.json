@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "nejogit.github.io",
+  "description": "- Website Nejo, using HTML, Sass and JavaScript. - Includes a dark and light mode. - Color customization. - Developed first with the Mobile First methodology, then for desktop. - Compatible with all mobile devices and with a beautiful and pleasant user interface.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NejoGit/NejoGit.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NejoGit/NejoGit.github.io/issues"
+  },
+  "homepage": "https://github.com/NejoGit/NejoGit.github.io#readme"
+}
