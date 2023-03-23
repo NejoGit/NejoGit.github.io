@@ -194,16 +194,6 @@ window.addEventListener('load', function() {
 
 
 
- 
-// window.addEventListener("load", function() {
-//     const form = document.getElementById('my-form');
-//    //Cargar al form su action desde variable de entorno
-//    const FORM_ENDPOINT = form.action.FORM_ENDPOINT;
-//    console.log(FORM_ENDPOINT);
-    
-//   });
-
-
 var modal = document.getElementById("modal");
 var countdownElement = document.getElementById("countdown");
 var modalLinks = document.getElementsByClassName("open-modal");
@@ -264,6 +254,37 @@ modal.onclick = function(event) {
 modalContent.onclick = function(event) {
   event.stopPropagation();
 }
+
+
+
+
+window.addEventListener("load", function () {
+  const form = document.getElementById('my-form');
+  form.action = "https://script.google.com/macros/s/AKfycbxCheV_XWfVXxvEc6XPLkfvXin1i0SArAmAhn0OvRiU2v984OzQf6--shSDRiD1dfJw6g/exec";
+
+  form.addEventListener("submit", function (evento) {
+      evento.preventDefault(); // Evita que se envíe el formulario
+
+      const nombre = document.getElementById('nombre').value;
+      const apellido = document.getElementById('apellido').value;
+      const email = document.getElementById('email').value;
+
+      if (nombre === '' || email === '' || apellido === '') {
+          alert('Por favor, completa todos los campos'); // Muestra un mensaje de error
+          return;
+      }
+      const data = new FormData(form);
+      const action = evento.target.action;
+
+      fetch(action, {
+          method: 'POST',
+          body: data,
+      })
+          .then(() => {
+              alert("Success!");
+          });
+  });
+});
 
 
 

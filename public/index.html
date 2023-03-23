@@ -12,7 +12,7 @@
 
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 
     <title>Nejo | Nuevas formas de trabajar</title>
 </head>
@@ -85,7 +85,7 @@
                 <a href="#contact" id="button-modal" class="button button-flex">
                     ¡Suscribirme ahora!
                 </a>
-            
+
             </div>
         </div>
         <!--=============== HOME ===============-->
@@ -95,7 +95,8 @@
 
                 <div class="home__data">
                     <div id="div-titulo">
-                        <h1 class="home__title move-from-left" id="titulo-animado">Comienza hoy mismo a explorar nuevas formas de vida en el extranjero</h1>
+                        <h1 class="home__title move-from-left" id="titulo-animado">Comienza hoy mismo a explorar nuevas
+                            formas de vida en el extranjero</h1>
                     </div>
                     <!-- <h1 class="home__title">Seguridad</h1> -->
                     <div class="home__space"></div>
@@ -217,7 +218,8 @@
             <div class="security__container grid">
                 <div class="security__data">
                     <h2 class="section__title-center">Características de Nejo</h2>
-                    <p class="section__description-center">Nuestros principales estándares y objetivos para ofrecerte la mejor experiencia posible</p>
+                    <p class="section__description-center">Nuestros principales estándares y objetivos para ofrecerte la
+                        mejor experiencia posible</p>
                     <!-- <p class="security__description">When your order reaches you, we have the health safety protocols,
                         so that you are protected from any disease. Watch the video of how the delivery is made.
                     </p> -->
@@ -279,7 +281,8 @@
                 <div class="services__data">
                     <h3 class="services__subtitle">Control de Ofertas</h3>
                     <img class="iconos" src="assets/Iconos/Control_ofertas.png" alt="">
-                    <p class="services__description">Accede a un seguimiento en nuestro sistema de Control de Ofertas. Conoce el
+                    <p class="services__description">Accede a un seguimiento en nuestro sistema de Control de Ofertas.
+                        Conoce el
                         estado de tus aplicaciones en tiempo real y proyecta tu futuro laboral con confianza.</p>
                     <div>
                         <a href="#" class="button button-link">Leer más</a>
@@ -335,9 +338,11 @@
         <section class="app section container">
             <div class="app__container grid">
                 <div class="app__data">
-                    <h2 class="section__title-center move-from-right">Miles de empleadores extranjeros te están buscando <br> Solo falta
+                    <h2 class="section__title-center move-from-right">Miles de empleadores extranjeros te están buscando
+                        <br> Solo falta
                         que descargues la app</h2>
-                    <p class="app__description move-from-right">Únete a Nejo y sé parte de nuestro movimiento hacia un futuro de
+                    <p class="app__description move-from-right">Únete a Nejo y sé parte de nuestro movimiento hacia un
+                        futuro de
                         oportunidades. ¡Juntos, podemos hacer que la búsqueda de empleo en el extranjero sea fácil y
                         segura para todos los trabajadores latinoamericanos!</p>
                     <div class="app__buttons">
@@ -351,7 +356,8 @@
                 </div>
 
 
-                <img class="svg__img svg__color app__img move-from-left" viewBox="0 0 312 256" src="assets/img/AppSearchImg.png">
+                <img class="svg__img svg__color app__img move-from-left" viewBox="0 0 312 256"
+                    src="assets/img/AppSearchImg.png">
 
             </div>
         </section>
@@ -362,7 +368,7 @@
                 <div class="contact__container grid">
                     <div class="contact__content">
                         <h2 class="section__title-center">
-                           Contactanos<br>ahora
+                            Contactanos<br>ahora
                         </h2>
                         <p class="contact__description">Suscribete a la comunidad Nejo LATAM.</p>
                         <div class="container__input">
@@ -434,7 +440,8 @@
             <div class="footer__content">
                 <h3 class="footer__title">Comunidad</h3>
                 <ul class="footer__links">
-                    <li><a href="https://chat.whatsapp.com/I5K805KP8HEK2SojpD9E4u" class="footer__link">Grupo Whatsapp</a></li>
+                    <li><a href="https://chat.whatsapp.com/I5K805KP8HEK2SojpD9E4u" class="footer__link">Grupo
+                            Whatsapp</a></li>
                     <li><a href="#" class="footer__link">Soporte</a></li>
                     <li><a href="#" class="footer__link">Preguntas</a></li>
                     <!-- <li><a href="#" class="footer__link">Customer help</a></li> -->
@@ -462,34 +469,6 @@
     </script>
     <script>
 
-
-        window.addEventListener("load", function () {
-            const form = document.getElementById('my-form');
-            form.action = "<%= varenv %>";
-
-            form.addEventListener("submit", function (evento) {
-                evento.preventDefault(); // Evita que se envíe el formulario
-
-                const nombre = document.getElementById('nombre').value;
-                const apellido = document.getElementById('apellido').value;
-                const email = document.getElementById('email').value;
-
-                if (nombre === '' || email === ''|| apellido === '') {
-                    alert('Por favor, completa todos los campos'); // Muestra un mensaje de error
-                    return;
-                }
-                const data = new FormData(form);
-                const action = evento.target.action;
-
-                fetch(action, {
-                    method: 'POST',
-                    body: data,
-                })
-                    .then(() => {
-                        alert("Success!");
-                    });
-            });
-        });
 
     </script>
 
