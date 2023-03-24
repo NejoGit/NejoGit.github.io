@@ -158,7 +158,7 @@ async function activarAnimacion() {
     
     const elementos = document.querySelectorAll('.move-from-left, .move-from-right');
     console.log(elementos);
-    const tamañoPantalla = window.innerHeight / 1.8;
+    const tamañoPantalla = window.innerHeight / 1;
     for (let i = 0; i < elementos.length; i++) {
       const posicion = elementos[i].getBoundingClientRect().top;
       if (posicion < tamañoPantalla) {
@@ -168,7 +168,7 @@ async function activarAnimacion() {
     }
   } else {
     const elementos = document.querySelectorAll('.move-from-left:not(.visible), .move-from-right:not(.visible)');
-    const tamañoPantalla = window.innerHeight / 1.8;
+    const tamañoPantalla = window.innerHeight / 1;
     for (let i = 0; i < elementos.length; i++) {
       const posicion = elementos[i].getBoundingClientRect().top;
       if (posicion < tamañoPantalla) {
