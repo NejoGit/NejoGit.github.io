@@ -88,6 +88,15 @@
 
             </div>
         </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="loader"></div>
+                <p class="loading-text">Enviando...</p>
+                <a href="#" id="success-modal" class="success-icon"><i class="material-icons">check_circle</i></a>
+                <p class="success-text">Success!</p>
+            </div>
+        </div>
         <!--=============== HOME ===============-->
         <section class="home section" id="home">
             <div class="home__container container grid">
@@ -340,7 +349,8 @@
                 <div class="app__data">
                     <h2 class="section__title-center move-from-right">Miles de empleadores extranjeros te están buscando
                         <br> Solo falta
-                        que descargues la app</h2>
+                        que descargues la app
+                    </h2>
                     <p class="app__description move-from-right">Únete a Nejo y sé parte de nuestro movimiento hacia un
                         futuro de
                         oportunidades. ¡Juntos, podemos hacer que la búsqueda de empleo en el extranjero sea fácil y
@@ -468,36 +478,72 @@
     <script src="main.js">
 
 
-  
+
     </script>
     <script>
         window.addEventListener("load", function () {
             const form = document.getElementById('my-form');
             form.action = "https://script.google.com/macros/s/AKfycbxCheV_XWfVXxvEc6XPLkfvXin1i0SArAmAhn0OvRiU2v984OzQf6--shSDRiD1dfJw6g/exec";
-          
             form.addEventListener("submit", function (evento) {
                 evento.preventDefault(); // Evita que se envíe el formulario
-          
+
                 const nombre = document.getElementById('nombre').value;
                 const apellido = document.getElementById('apellido').value;
                 const email = document.getElementById('email').value;
-          
+
                 if (nombre === '' || email === '' || apellido === '') {
                     alert('Por favor, completa todos los campos'); // Muestra un mensaje de error
                     return;
                 }
+
+                // Obtener el modal y los elementos de texto
+                const modal = document.getElementById("myModal");
+                const loader = document.querySelector(".loader");
+                const loadingText = document.querySelector(".loading-text");
+                const successText = document.querySelector(".success-text");
+                const success = document.getElementById("success-modal");
+
+                // Mostrar el modal y el loader
+                modal.style.display = "block";
+                loadingText.style.display = "block";
+                successText.style.display = "none";
+                success.style.display = "none";
+
+
                 const data = new FormData(form);
                 const action = evento.target.action;
-          
+
                 fetch(action, {
                     method: 'POST',
                     body: data,
                 })
                     .then(() => {
-                        alert("Success!");
+                        // Ocultar el loader y mostrar el mensaje de éxito
+                        loadingText.style.display = "none";
+                        successText.style.display = "block";
+                        success.style.display = "block";
+
+                        loader.style.display = "none";
+                        setTimeout(() => {
+                            // Cerrar el modal después de 2 segundos
+                            modal.style.display = "none";
+                            successText.style.display = "block";
+                            // Resetear el formulario
+                            form.reset();
+                        }, 2000);
+                    })
+                    .catch(() => {
+                        // En caso de error, ocultar el loader y mostrar un mensaje de error
+                        loadingText.style.display = "none";
+                        const errorText = document.querySelector(".error-text");
+                        errorText.style.display = "block";
+                        setTimeout(() => {
+                            // Ocultar el mensaje de error después de 2 segundos
+                            errorText.style.display = "none";
+                        }, 2000);
                     });
             });
-          });
+        });
     </script>
 
 

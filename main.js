@@ -162,22 +162,51 @@ async function activarAnimacion() {
     for (let i = 0; i < elementos.length; i++) {
       const posicion = elementos[i].getBoundingClientRect().top;
       if (posicion < tamañoPantalla) {
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 50));
         elementos[i].classList.add('visible');
       }
     }
   } else {
     const elementos = document.querySelectorAll('.move-from-left:not(.visible), .move-from-right:not(.visible)');
-    const tamañoPantalla = window.innerHeight / 1.4;
+    const tamañoPantalla = window.innerHeight / 1.2;
     for (let i = 0; i < elementos.length; i++) {
       const posicion = elementos[i].getBoundingClientRect().top;
       if (posicion < tamañoPantalla) {
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 50));
         elementos[i].classList.add('visible');
       }
     }
   }
 }
+
+// const animacionYaActivada = false;
+// const mq = window.matchMedia('(max-width: 767px)'); // media query para pantallas de celular
+
+// async function activarAnimacion() {
+//   if (!mq.matches && !animacionYaActivada) { // verifica que no esté en pantalla de celular
+//     const elementos = document.querySelectorAll('.move-from-left, .move-from-right');
+//     console.log(elementos);
+//     const tamañoPantalla = window.innerHeight / 1.2;
+//     for (let i = 0; i < elementos.length; i++) {
+//       const posicion = elementos[i].getBoundingClientRect().top;
+//       if (posicion < tamañoPantalla) {
+//         await new Promise(resolve => setTimeout(resolve, 50));
+//         elementos[i].classList.add('visible');
+//       }
+//     }
+//   } else if (!mq.matches) { // verifica que no esté en pantalla de celular
+//     const elementos = document.querySelectorAll('.move-from-left:not(.visible), .move-from-right:not(.visible)');
+//     const tamañoPantalla = window.innerHeight / 1.2;
+//     for (let i = 0; i < elementos.length; i++) {
+//       const posicion = elementos[i].getBoundingClientRect().top;
+//       if (posicion < tamañoPantalla) {
+//         await new Promise(resolve => setTimeout(resolve, 50));
+//         elementos[i].classList.add('visible');
+//       }
+//     }
+//   }
+// }
+
 
 
 window.addEventListener('scroll', function() {

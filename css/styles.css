@@ -130,8 +130,7 @@ img {
   50% {
     border-color: transparent;
   }
-}
-
+}/* Estilos para tamaños de pantalla grandes */
 .move-from-left,
 .move-from-right {
   opacity: 0;
@@ -155,6 +154,22 @@ img {
 .move-from-right {
   transform: translateX(30%);
 }
+
+/* Estilos para tamaños de pantalla pequeños */
+@media only screen and (max-width: 767px) {
+  .move-from-left,
+  .move-from-right {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  .move-from-left.visible,
+  .move-from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 /*=============== Modal ===============*/
 .modal {
@@ -255,6 +270,40 @@ img {
   to {
     transform: scale(0);
   }
+}
+
+
+/* Estilos para la animación de carga */
+.loader {
+  border: 8px solid #f3f3f3; /* Color del borde del loader */
+  border-top: 8px solid #3498db; /* Color del borde superior del loader */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite; /* Animación de carga */
+  margin: 0 auto; /* Centrar el loader */
+}
+
+/* Estilos para el texto de carga y éxito */
+.loading-text, .success-text {
+  margin-top: 20px;
+}
+
+
+.success-icon .material-icons {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  color:#FF6C40;
+  line-height: 1;
+  text-align: center;
+}
+
+
+/* Animación de carga */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
